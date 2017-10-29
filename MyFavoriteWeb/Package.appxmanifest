@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="0fd20ac3-2bf9-4f43-aade-c3ef62e0950e"
-    Publisher="CN=AlunoFIAP"
+    Name="a2e8f5bf-1cea-4e5b-b8d3-6fd66f31a97b"
+    Publisher="CN=danil"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="0fd20ac3-2bf9-4f43-aade-c3ef62e0950e" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="a2e8f5bf-1cea-4e5b-b8d3-6fd66f31a97b" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>MyFavoriteSite</DisplayName>
-    <PublisherDisplayName>AlunoFIAP</PublisherDisplayName>
+    <DisplayName>MyFavoriteWeb</DisplayName>
+    <PublisherDisplayName>danil</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -30,12 +30,12 @@
   <Applications>
     <Application Id="App"
       Executable="$targetnametoken$.exe"
-      EntryPoint="MyFavoriteSite.App">
+      EntryPoint="MyFavoriteWeb.App">
       <uap:VisualElements
-        DisplayName="MyFavoriteSite"
+        DisplayName="MyFavoriteWeb"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="MyFavoriteSite"
+        Description="MyFavoriteWeb"
         BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
