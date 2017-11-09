@@ -9,7 +9,20 @@ namespace MyFavoriteWeb.Views
     {
         public NavegadorWebView()
         {
-            this.InitializeComponent();
+            InitializeComponent();
+            //webView.ContainsFullScreenElementChanged += (WebView sender, object args) =>
+            //{
+            //    var applicationView = ApplicationView.GetForCurrentView();
+
+            //    if (sender.ContainsFullScreenElement)
+            //    {
+            //        applicationView.TryEnterFullScreenMode();
+            //    }
+            //    else if (applicationView.IsFullScreenMode)
+            //    {
+            //        applicationView.ExitFullScreenMode();
+            //    }
+            //};
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -21,6 +34,13 @@ namespace MyFavoriteWeb.Views
         {
             MessageDialog msg = new MessageDialog($"A página {webView.Source} foi salva com sucesso!", "Página da web");
             await msg.ShowAsync();
+        }
+
+        private void Grid_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            double remainingWidth = Window.Current.Bounds.Width;
+            webView.Width = remainingWidth;
+            webView.Height = e.NewSize.Height;
         }
     }
 }

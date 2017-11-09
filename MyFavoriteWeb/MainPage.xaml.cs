@@ -1,4 +1,5 @@
-﻿using MyFavoriteWeb.ViewModels;
+﻿using MyFavoriteWeb.Services;
+using MyFavoriteWeb.ViewModels;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
@@ -12,6 +13,7 @@ namespace MyFavoriteWeb
         {
             InitializeComponent();
             Loaded += MainPage_Loaded;
+            NavigationService.Frame = frameNavigation;
         }
 
         private void MainPage_Loaded(object sender, RoutedEventArgs e)
@@ -21,32 +23,33 @@ namespace MyFavoriteWeb
 
         private void WebView_Click(object sender, RoutedEventArgs e)
         {
-            frameNavigation.Navigate(typeof(Views.NavegadorWebView));
+            NavigationService.Navigate<Views.NavegadorWebView>();
         }
 
         private void ListaSites_Click(object sender, RoutedEventArgs e)
         {
-            frameNavigation.Navigate(typeof(Views.ListaSitesView));
+            NavigationService.Navigate<Views.ListaSitesView>();
         }
 
         private void Cadastro_Click(object sender, RoutedEventArgs e)
         {
-            frameNavigation.Navigate(typeof(Views.CadastroView));
+            NavigationService.Navigate<Views.CadastroView>();
         }
 
         private void Sobre_Click(object sender, RoutedEventArgs e)
         {
-            frameNavigation.Navigate(typeof(Views.SobreView));
+            NavigationService.Navigate<Views.SobreView>();
         }
 
         private void Configuracao_Click(object sender, RoutedEventArgs e)
         {
-            frameNavigation.Navigate(typeof(Views.SobreView));
+            NavigationService.Navigate<Views.SobreView>();
         }
 
         private void Sair_Click(object sender, RoutedEventArgs e)
         {
-            //
+            NavigationService.Frame = Window.Current.Content as Frame;
+            NavigationService.Navigate(typeof(Login));
         }
     }
 }

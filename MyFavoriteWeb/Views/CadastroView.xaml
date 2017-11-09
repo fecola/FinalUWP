@@ -8,13 +8,15 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Stretch">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Stretch" Padding="15">
             <TextBlock HorizontalAlignment="Center" Margin="0,0,0,20">Cadastro</TextBlock>
+            <Image Source="ms-appx:///Assets/profile.png" Width="140" Margin="0,0,0,20"></Image>
+            <Image Source="ms-appx:///Assets/camera.png" Width="40" Margin="150,-55,0,20"></Image>
             <TextBox PlaceholderText="Nome"></TextBox>
             <TextBox PlaceholderText="E-mail" Margin="0,10,0,0"></TextBox>
             <TextBox PlaceholderText="Senha" Margin="0,10,0,0"></TextBox>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button Width="150" Margin="0,10,10,0">Cancelar</Button>
+                <Button Width="150" Margin="0,10,10,0" Click="Button_Click">Cancelar</Button>
                 <Button Width="150" Margin="10,10,0,0">Salvar</Button>
             </StackPanel>
         </StackPanel>

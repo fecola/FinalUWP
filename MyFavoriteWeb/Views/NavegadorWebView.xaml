@@ -7,14 +7,14 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" SizeChanged="Grid_SizeChanged">
         <StackPanel Padding="10">
             <StackPanel Orientation="Horizontal">
                 <TextBox x:Name="txtSite"  Width="300"></TextBox>
                 <Button Click="Button_Click">Ir</Button>
                 <Button Click="Button_Click_1">Salvar Página</Button>
             </StackPanel>
-            <WebView x:Name="webView"  Source="https://www.google.com.br" Height="500"></WebView>
+            <WebView x:Name="webView" Source="https://www.google.com.br"></WebView>
         </StackPanel>
     </Grid>
 </Page>
