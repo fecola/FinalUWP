@@ -10,8 +10,12 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Stretch" Padding="15">
             <TextBlock HorizontalAlignment="Center" Margin="0,0,0,20">Cadastro</TextBlock>
-            <Image Source="ms-appx:///Assets/profile.png" Width="140" Margin="0,0,0,20"></Image>
-            <Image Source="ms-appx:///Assets/camera.png" Width="40" Margin="150,-55,0,20"></Image>
+            <Image Name="imgAvatar" Source="ms-appx:///Assets/profile.png" Width="140" Margin="0,0,0,20"></Image>
+
+            <Button Width="40" Background="Transparent" Height="39" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Padding="0" BorderThickness="0" Margin="200, -60, 20, 20" Click="OpenCamera">
+                <Image Source="ms-appx:///Assets/camera.png" Width="40" Stretch="UniformToFill"></Image>
+            </Button>
+            
             <TextBox PlaceholderText="Nome"></TextBox>
             <TextBox PlaceholderText="E-mail" Margin="0,10,0,0"></TextBox>
             <TextBox PlaceholderText="Senha" Margin="0,10,0,0"></TextBox>
