@@ -10,11 +10,15 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" SizeChanged="Grid_SizeChanged">
         <StackPanel Padding="10">
             <StackPanel Orientation="Horizontal">
-                <TextBox x:Name="txtSite"  Width="300"></TextBox>
-                <Button Click="Button_Click">Ir</Button>
-                <Button Click="Button_Click_1">Salvar Página</Button>
+                <TextBox x:Name="site" Width="400" HorizontalAlignment="Stretch"></TextBox>
+                <Button Click="Button_Click" Margin="5, 0, 0, 0" Width="46" Height="46">Ir</Button>
+                <!--<Button Click="Button_Click_1">Salvar Página</Button>-->
+                <Button Background="Transparent" Height="60" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Padding="0" BorderThickness="0" Margin="20, -10, 0, 0">
+                    <Image Source="ms-appx:///Assets/favorite.png" Width="50" Stretch="UniformToFill"></Image>
+                </Button>
             </StackPanel>
-            <WebView x:Name="webView" Source="https://www.google.com.br"></WebView>
+            
+            <WebView x:Name="webView" Source="https://www.uol.com.br" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="Auto" Width="Auto" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" />
         </StackPanel>
     </Grid>
 </Page>

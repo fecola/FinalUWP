@@ -67,8 +67,8 @@ namespace MyFavoriteWeb.Views
                         Senha = Senha.Password
                     };
 
-                    context.Usuarios.Add(usuario);
-                    context.SaveChanges();
+                    //context.Usuarios.Add(usuario);
+                    //context.SaveChanges();
                 }
             }
             catch

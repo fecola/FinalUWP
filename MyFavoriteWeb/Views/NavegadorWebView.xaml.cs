@@ -1,5 +1,6 @@
 ﻿using System;
 using Windows.UI.Popups;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
@@ -27,7 +28,7 @@ namespace MyFavoriteWeb.Views
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            webView.Source = new Uri(txtSite.Text);
+            webView.Source = new Uri(site.Text);
         }
 
         private async void Button_Click_1(object sender, RoutedEventArgs e)

@@ -130,6 +130,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\camera.png" />
+    <Content Include="Assets\favorite.png" />
     <Content Include="Assets\logo.png" />
     <Content Include="Assets\profile.png" />
     <Content Include="Properties\Default.rd.xml" />
@@ -182,7 +183,7 @@
       <Version>1.1.2</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
-      <Version>6.0.1</Version>
+      <Version>5.2.2</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms">
       <Version>2.4.0.280</Version>

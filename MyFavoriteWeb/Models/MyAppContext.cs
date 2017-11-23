@@ -8,14 +8,7 @@ namespace MyFavoriteWeb.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            try
-            {
-                optionsBuilder.UseSqlite("Data Source=MyFavoriteWeb.db");
-            }
-            catch (System.Exception ex)
-            {
-                throw;
-            }
+            optionsBuilder.UseSqlite("Data Source=MyFavoriteWeb.db");
         }
     }
 }
