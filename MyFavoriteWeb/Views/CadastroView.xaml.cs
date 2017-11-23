@@ -1,11 +1,11 @@
-﻿using MyFavoriteWeb.Services;
-using System;
+﻿using System;
+using Windows.UI.Xaml;
 using Windows.Foundation;
 using Windows.Media.Capture;
-using Windows.Storage;
-using Windows.UI.Xaml;
+using MyFavoriteWeb.Services;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Imaging;
+using MyFavoriteWeb.Models;
 
 namespace MyFavoriteWeb.Views
 {
@@ -16,7 +16,7 @@ namespace MyFavoriteWeb.Views
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Cancel(object sender, RoutedEventArgs e)
         {
             NavigationService.GoBack();
         }
@@ -51,6 +51,30 @@ namespace MyFavoriteWeb.Views
             BitmapImage fallbackImage = new BitmapImage(new Uri("ms-appx:///Assets/StoreLogo.png"));
             img.Width = 100;
             img.Source = fallbackImage;
+        }
+
+        private void Save(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                using (var context = new MyAppContext())
+                {
+                    var usuario = new Usuario
+                    {
+                        Id = Guid.NewGuid(),
+                        Nome = Nome.Text,
+                        Email = Email.Text,
+                        Senha = Senha.Password
+                    };
+
+                    context.Usuarios.Add(usuario);
+                    context.SaveChanges();
+                }
+            }
+            catch
+            {
+                throw;
+            }
         }
     }
 }
