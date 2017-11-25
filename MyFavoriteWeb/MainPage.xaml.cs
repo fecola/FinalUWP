@@ -43,7 +43,7 @@ namespace MyFavoriteWeb
 
         private void Configuracao_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate<Views.SobreView>();
+            NavigationService.Navigate<Views.ConfiguracaoView>();
         }
 
         private void Sair_Click(object sender, RoutedEventArgs e)
