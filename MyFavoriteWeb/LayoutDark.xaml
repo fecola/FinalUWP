@@ -4,7 +4,7 @@
     xmlns:local="using:MyFavoriteWeb">
 
 
-    <Style TargetType="ToggleSwitch" x:Key="DictionaryButtonStyle">
+    <Style TargetType="Page" x:Key="DictionaryButtonStyle">
         <Setter Property="Background" Value="Yellow"/>
     </Style>
 

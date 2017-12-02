@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="MyFavoriteWeb.Views.CadastroView"
+    x:Class="MyFavoriteWeb.Views.ConfiguracaoView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:MyFavoriteWeb.Views"
@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Page.Resources>
+    <Page.Resources >
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="LayoutDark.xaml" />
@@ -15,14 +15,15 @@
         </ResourceDictionary>
     </Page.Resources>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" >
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Stretch" Padding="15">
-            <ToggleSwitch Header="Dark" OnContent="Ligado" OffContent="Desligado" Style="{StaticResource DictionaryButtonStyle}"/>
-            <TextBox x:Name="Nome" PlaceholderText="Nome"></TextBox>
-            <Button Content="Teste" />
+    <Page Style="{StaticResource DictionaryButtonStyle}">
+        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" >
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Stretch" Padding="15">
+                <ToggleSwitch Header="Dark" OnContent="Ligado" OffContent="Desligado" />
+                <TextBox x:Name="Nome" PlaceholderText="Nome"></TextBox>
+                <Button Content="Teste" />
 
 
-        </StackPanel>
-    </Grid>
-    
+            </StackPanel>
+        </Grid>
+    </Page>
 </Page>
