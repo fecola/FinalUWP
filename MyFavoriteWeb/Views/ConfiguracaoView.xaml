@@ -12,15 +12,31 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="LayoutDark.xaml" />
             </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
+
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Default">
+                    <Color x:Key="SystemAltHighColor">Gray</Color>
+                    <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="{ThemeResource SystemAltHighColor}" />
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="Dark">
+                    <Color x:Key="SystemAltHighColor">#11CC11</Color>
+                    <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="{ThemeResource SystemAltHighColor}" />
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+
+            <Style TargetType="Grid">
+                <Setter Property="Background" Value="Blue"/>
+            </Style>
+
+        </ResourceDictionary>        
     </Page.Resources>
 
-    <Page Style="{StaticResource DictionaryButtonStyle}">
-        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" >
+    <Page>
+        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" RequestedTheme="Dark" >
             <StackPanel VerticalAlignment="Center" HorizontalAlignment="Stretch" Padding="15">
-                <ToggleSwitch Header="Dark" OnContent="Ligado" OffContent="Desligado" />
+                <ToggleSwitch Header="Dark" OnContent="Ligado" OffContent="Desligado"  />
                 <TextBox x:Name="Nome" PlaceholderText="Nome"></TextBox>
-                <Button Content="Teste" />
+                <Button Content="Teste"  Style="{StaticResource DictionaryButtonStyle}"/>
 
 
             </StackPanel>

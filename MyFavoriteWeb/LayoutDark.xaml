@@ -4,8 +4,8 @@
     xmlns:local="using:MyFavoriteWeb">
 
 
-    <Style TargetType="Page" x:Key="DictionaryButtonStyle">
-        <Setter Property="Background" Value="Yellow"/>
+    <Style TargetType="Button" x:Key="DictionaryButtonStyle">
+        <Setter Property="Background" Value="Green"/>
     </Style>
 
 
